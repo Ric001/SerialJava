@@ -1,0 +1,6 @@
+<beans>
+    <bean id="Greeter" class="com.mycompany.app.Greeter">
+        <property name = "message" value="Hi People"/>
+    </bean>
+
+</beans>

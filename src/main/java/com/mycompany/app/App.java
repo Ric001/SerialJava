@@ -146,13 +146,17 @@ public class App {
         
         FileWriter writer = new FileWriter(new File(".\\chapter7\\Jenet.txt"));
         
-        writer.write("Go go Dools");
-        writer.close();
+        BufferedWriter bWriter = new BufferedWriter(writer);
+        bWriter.append("Go go Dools\n");
+        bWriter.append("Goo");
+        
+        bWriter.flush();
+        bWriter.close();
         
         if (dir.isDirectory()) {
             String[] dirContents = dir.list();
             for (int i = 0; i  < dirContents.length; i++) {
-                System.out.println(dirContents);
+                System.out.println(dirContents[i]);
             }
 
             System.out.println(dir.getAbsolutePath());

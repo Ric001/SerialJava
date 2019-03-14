@@ -2,7 +2,6 @@ package com.mycompany.app;
 
 import java.io.InputStream;
 
-
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.containsString;

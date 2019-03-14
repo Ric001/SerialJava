@@ -15,8 +15,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.logging.Logger;
 import java.io.IOException;
-
-public class App {
+import javax.swing.JButton;
+public class App implements Serializable{
     public final static Logger LOGGER = Logger.getLogger(App.class.getName());
     public static class Character implements Serializable{
         private String creature;
@@ -100,6 +100,9 @@ public class App {
         characters.add(one);
         characters.add(two);
         characters.add(three);
+        
+        final Character character = new Character("Nomo", 2, "nugget-pollo");
+        characters.stream().filter(s -> s.equals(character));
 
         try {
             secondMain(characters);
@@ -113,6 +116,9 @@ public class App {
         saveFile(charactersTXTFile, characters);
         testFile();
         loadFile(charactersTXTFile);
+
+        
+        
     }
 
     private static void secondMain(List<Character> characters) throws Exception {
@@ -135,7 +141,8 @@ public class App {
             BufferedWriter writer = new BufferedWriter(new FileWriter(file));
             
             for (Character character : characters) {
-                writer.write(character.getFullState().concat("\n"));
+                writer.write(character.getFullState().concat("/"));
+                
             }
             writer.close();
         } catch (Exception ex) {
@@ -170,21 +177,38 @@ public class App {
     }
 
     private static void loadFile(File file) {
+
         FileReader fileReader = null;
         BufferedReader bufferedReader = null;
         try {
             fileReader = new FileReader(file);
             bufferedReader = new BufferedReader(fileReader);
             String line = "";
+            String[] charactersDetails = null;
             while(( line = bufferedReader.readLine()) != null) {
-                System.out.println(line);
+                System.out.println(line);        
+                charactersDetails = line.split("/");
             }
 
-            bufferedReader.close();
+            if (charactersDetails != null) {
+                for (String details : charactersDetails) {
+                    System.out.println(details);
+                }
+            }
+            
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+
         } catch (IOException ex) {
             ex.printStackTrace();
+
+        } finally {
+            try {
+				bufferedReader.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
         }
         
     }

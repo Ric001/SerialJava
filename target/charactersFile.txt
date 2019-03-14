@@ -1,3 +1,1 @@
-Creature: elf Level: 20 Weapon: Knife
-Creature: elf Level: 12 Weapon: Sword
-Creature: elf Level: 11 Weapon: Knife
+Creature: elf Level: 20 Weapon: Knife/Creature: elf Level: 12 Weapon: Sword/Creature: elf Level: 11 Weapon: Knife/

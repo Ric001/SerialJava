@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.io.Serializable;
 import java.io.File;
 import java.io.BufferedWriter;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.logging.Logger;
 import java.io.IOException;
 
@@ -104,10 +106,13 @@ public class App {
         } catch (Exception ex) {
             ex.printStackTrace();
         } 
-
-        saveFile(new File(".\\File.txt"), characters);
+        File charactersTXTFile = new File("charactersFile.txt");
+        File fileKiller = new File("File.txt");
+        fileKiller.delete();
+        LOGGER.info("File.txt deleted");
+        saveFile(charactersTXTFile, characters);
         testFile();
-    
+        loadFile(charactersTXTFile);
     }
 
     private static void secondMain(List<Character> characters) throws Exception {
@@ -138,7 +143,7 @@ public class App {
         }
     }
 
-    static void testFile() throws Exception{
+    private static void testFile() throws Exception{
         File file = new File(".\\MyCode.txt");
         
         File dir = new File("Chapter7");
@@ -162,5 +167,25 @@ public class App {
             System.out.println(dir.getAbsolutePath());
             boolean isDeleted = file.delete();
         } 
+    }
+
+    private static void loadFile(File file) {
+        FileReader fileReader = null;
+        BufferedReader bufferedReader = null;
+        try {
+            fileReader = new FileReader(file);
+            bufferedReader = new BufferedReader(fileReader);
+            String line = "";
+            while(( line = bufferedReader.readLine()) != null) {
+                System.out.println(line);
+            }
+
+            bufferedReader.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        
     }
 }

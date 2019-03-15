@@ -1,13 +1,11 @@
 package com.mycompany.app.sockets;
 
-/**
- * Hello world!
- *
- */
+
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        DailyAdviceClient adviceClient = new DailyAdviceClient();
+        adviceClient.go();
     }
 }

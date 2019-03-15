@@ -119,7 +119,6 @@ public class App implements Serializable{
         saveFile(charactersTXTFile, characters);
         testFile();
         loadFile(charactersTXTFile);
-
         actionPerformed();
     }
 
@@ -249,10 +248,13 @@ public class App implements Serializable{
             fileInStream = new FileInputStream(new File("CheckboxesState.ser"));
             is = new ObjectInputStream(fileInStream);
             checkboxState = (boolean[]) is.readObject();
+            for (int i = 0; i < 256; i++) {
+                System.out.println( i + ": " + checkboxState[i]);
 
+            }
         } catch (Exception ex) {
             ex.printStackTrace();
-            
+
         } finally {
             try {
                 is.close();

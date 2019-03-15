@@ -15,10 +15,13 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.logging.Logger;
 import java.io.IOException;
-import javax.swing.JButton;
+
+
 public class App implements Serializable{
+
     public final static Logger LOGGER = Logger.getLogger(App.class.getName());
     public static class Character implements Serializable{
+        private static final long serialVersionUID = -4799551375424315056L;
         private String creature;
         private int level;
         private String weapon;
@@ -117,8 +120,7 @@ public class App implements Serializable{
         testFile();
         loadFile(charactersTXTFile);
 
-        
-        
+        actionPerformed();
     }
 
     private static void secondMain(List<Character> characters) throws Exception {
@@ -210,6 +212,53 @@ public class App implements Serializable{
 				e.printStackTrace();
 			}
         }
-        
+    }
+
+    private static void actionPerformed() {
+        boolean[] checkboxState = new boolean[256];
+        FileOutputStream fileStream = null;
+        ObjectOutputStream outputStream = null;
+        for (int i = 0; i < 256; i++) {
+            checkboxState[i] = true;
+        }
+
+        try {
+            fileStream = new FileOutputStream( new File("CheckboxesState.ser"));
+            outputStream = new ObjectOutputStream(fileStream);
+            outputStream.writeObject(checkboxState);
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch(IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                outputStream.close();
+            } catch(IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private static void restoreCheckboxesState() {
+        FileInputStream fileInStream = null;
+        ObjectInputStream is = null;
+        boolean[] checkboxState = null;
+
+        try {
+            fileInStream = new FileInputStream(new File("CheckboxesState.ser"));
+            is = new ObjectInputStream(fileInStream);
+            checkboxState = (boolean[]) is.readObject();
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            
+        } finally {
+            try {
+                is.close();
+            } catch(IOException ex) {
+                ex.printStackTrace();
+            }
+        }
     }
 }

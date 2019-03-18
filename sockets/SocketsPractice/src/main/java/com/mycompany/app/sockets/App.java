@@ -5,7 +5,6 @@ public class App
 {
     public static void main( String[] args )
     {
-        DailyAdviceClient adviceClient = new DailyAdviceClient();
-        adviceClient.go();
+        new ChatClient().go();
     }
 }

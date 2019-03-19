@@ -25,18 +25,16 @@ public class ChatClient {
         JPanel mainPanel = new JPanel();
         sendButton = new JButton("Send Message");
         outGoing = new JTextField(20);
-        sendButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent event) {
-                try {
-                    writer.println(outGoing.getText());
-                    writer.flush();
-                } catch (Exception ex) {
-                    ex.printStackTrace();
-                }
-                outGoing.setText("");
-                outGoing.requestFocus();
+        sendButton.addActionListener(event -> {
+            try {
+                writer.println(outGoing.getText());
+                writer.flush();
+            } catch (Exception ex) {
+                ex.printStackTrace();
             }
+            
+            outGoing.setText("");
+            outGoing.requestFocus();
         });
         mainPanel.add(sendButton);
         mainPanel.add(outGoing);

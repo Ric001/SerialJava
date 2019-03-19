@@ -8,6 +8,7 @@ import java.io.IOException;
 
 public class DailyAdviceClient 
 {
+    
     public void go() {
         Socket socket = null;
         try {

@@ -6,13 +6,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
 
-public class DailyAdviceClient 
+public class DailyAdviceClient
 {
     
     public void go() {
         Socket socket = null;
         try {
-            socket = new Socket("127.0.0.1", 4242);
+            socket = new Socket("localhost", 4242);
             
             InputStreamReader streamReader = new InputStreamReader(socket.getInputStream());
             BufferedReader reader = new BufferedReader(streamReader);

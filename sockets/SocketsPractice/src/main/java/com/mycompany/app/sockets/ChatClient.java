@@ -19,6 +19,7 @@ public class ChatClient {
     private Socket socket;
     private PrintWriter writer;
     private JTextField outGoing;
+    
     public void go() {
         frame = new JFrame("Chat Client");
         frame.setSize(300,200);

@@ -36,7 +36,7 @@ public class JukeBox1 {
     public void go() {
         getSongs();
         System.out.println(songList);
-        Collections.sort(songList);
+        //Collections.sort(songList);
         System.out.println(songList);
     }
 }

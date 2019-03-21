@@ -5,14 +5,8 @@ public class App
     public static void main( String[] args )
     {
         
-        RyanAndMonicaJob theJob = new App().getRyanAndMonicaJob();
-        theJob.setAmount(10);
-        Thread one = new Thread(theJob);
-        Thread two = new Thread(theJob);
-        one.setName("Ryan Thread");
-        two.setName("Monica Thread");
-        one.start();
-        two.start(); 
+        SimpleChatClient client = new SimpleChatClient();
+        client.go();
         
     }
 

@@ -7,9 +7,18 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.util.Collections;
+import java.util.Comparator;
 public class JukeBox1 {
 
     private ArrayList<Song> songList = new ArrayList<Song>();
+
+
+    class ArtistCompare implements Comparator<Song> {
+        @Override 
+        public int compare(Song one, Song two) {
+            return one.getArtist().compareTo(two.getArtist());
+        }
+    } 
 
     public void addSong(String line) {
         String[] tokens = line.split("/");
@@ -36,7 +45,12 @@ public class JukeBox1 {
     public void go() {
         getSongs();
         System.out.println(songList);
-        //Collections.sort(songList);
+        Collections.sort(songList);
+
+
+        ArtistCompare artistCompare = new ArtistCompare();
+        Collections.sort(songList, artistCompare);
+
         System.out.println(songList);
     }
 }

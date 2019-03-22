@@ -1,6 +1,6 @@
 package com.data.app;
 
-public class Song {
+public class Song implements Comparable<Song>{
     private String title;
     private String artist;
     private String rating;
@@ -44,5 +44,10 @@ public class Song {
     @Override
     public String toString() {
         return title;
+    }
+
+    @Override 
+    public int compareTo(Song song) {
+        return title.compareTo(song.getTitle());
     }
 }

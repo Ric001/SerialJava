@@ -1,5 +1,6 @@
 package com.data.app;
 
+
 public class Song implements Comparable<Song>{
     private String title;
     private String artist;
@@ -43,11 +44,13 @@ public class Song implements Comparable<Song>{
 
     @Override
     public String toString() {
-        return title;
+        return title.concat(" - ").concat(artist);
     }
 
     @Override 
     public int compareTo(Song song) {
         return title.compareTo(song.getTitle());
     }
+
+    
 }

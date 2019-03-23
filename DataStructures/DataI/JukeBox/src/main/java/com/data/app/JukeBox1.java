@@ -27,7 +27,8 @@ public class JukeBox1 {
     }
 
     public void getSongs() {
-        File songsFile = new File("C:\\Users\\jose osorio soto\\myapp\\DataStructures\\DataI\\JukeBox\\target\\txt\\Songs.txt");
+        String path = System.getProperty("user.dir");
+        File songsFile = new File(".\\target\\txt\\Songs.txt");
         try {
             BufferedReader reader = new BufferedReader(new FileReader(songsFile));
             String line; 

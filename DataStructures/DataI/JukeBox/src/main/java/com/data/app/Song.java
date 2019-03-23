@@ -52,6 +52,5 @@ public class Song implements Comparable<Song>{
     public int compareTo(Song song) {
         return title.compareTo(song.getTitle());
     }
-
     
 }

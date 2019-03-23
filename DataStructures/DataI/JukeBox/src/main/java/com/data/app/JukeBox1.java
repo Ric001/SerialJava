@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.util.Collections;
 import java.util.Comparator;
+
 public class JukeBox1 {
 
     private ArrayList<Song> songList = new ArrayList<Song>();
@@ -23,7 +24,6 @@ public class JukeBox1 {
     public void addSong(String line) {
         String[] tokens = line.split("/");
         songList.add( new Song(tokens[0], tokens[1], tokens[2], tokens[3]) );
-        
     }
 
     public void getSongs() {

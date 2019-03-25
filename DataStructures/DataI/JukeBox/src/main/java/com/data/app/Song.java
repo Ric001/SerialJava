@@ -1,6 +1,7 @@
 package com.data.app;
 
 
+
 public class Song implements Comparable<Song>{
     private String title;
     private String artist;
@@ -51,6 +52,7 @@ public class Song implements Comparable<Song>{
     public int compareTo(Song song) {
         return title.compareTo(song.getTitle());
     }
+<<<<<<< HEAD
 
     @Override
     public boolean equals(Object aSong) {
@@ -62,5 +64,7 @@ public class Song implements Comparable<Song>{
     public int hashCode() {
         return title.hashCode();
     }
+=======
+>>>>>>> afb0099879c0fe93468867764cc9c00f416120bb
     
 }

@@ -8,7 +8,11 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.util.Collections;
 import java.util.Comparator;
+<<<<<<< HEAD
 import java.util.HashSet;
+=======
+
+>>>>>>> afb0099879c0fe93468867764cc9c00f416120bb
 public class JukeBox1 {
 
     private ArrayList<Song> songList = new ArrayList<Song>();
@@ -24,11 +28,11 @@ public class JukeBox1 {
     public void addSong(String line) {
         String[] tokens = line.split("/");
         songList.add( new Song(tokens[0], tokens[1], tokens[2], tokens[3]) );
-        
     }
 
     public void getSongs() {
-        File songsFile = new File("C:\\Users\\jose osorio soto\\myapp\\DataStructures\\DataI\\JukeBox\\target\\txt\\Songs.txt");
+        String path = System.getProperty("user.dir");
+        File songsFile = new File(".\\target\\txt\\Songs.txt");
         try {
             BufferedReader reader = new BufferedReader(new FileReader(songsFile));
             String line; 

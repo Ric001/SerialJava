@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashSet;
 public class JukeBox1 {
 
     private ArrayList<Song> songList = new ArrayList<Song>();
@@ -48,8 +49,8 @@ public class JukeBox1 {
         Collections.sort(songList);
 
 
-        ArtistCompare artistCompare = new ArtistCompare();
-        Collections.sort(songList, artistCompare);
+        HashSet<Song> songSet = new HashSet<Song>();
+        songSet.addAll(songList);
 
         System.out.println(songList);
     }

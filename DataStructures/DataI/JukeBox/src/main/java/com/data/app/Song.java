@@ -52,5 +52,15 @@ public class Song implements Comparable<Song>{
         return title.compareTo(song.getTitle());
     }
 
+    @Override
+    public boolean equals(Object aSong) {
+        Song s = (Song) aSong;
+        return getTitle().equals(s.getTitle());
+    }
+
+    @Override
+    public int hashCode() {
+        return title.hashCode();
+    }
     
 }

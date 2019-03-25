@@ -1,12 +1,13 @@
 package com.data.app;
 
-
+import java.util.logging.Logger;
 
 public class Song implements Comparable<Song>{
     private String title;
     private String artist;
     private String rating;
     private String bpm;
+    public transient final static Logger LOGGER = Logger.getLogger(Song.class.getName());
 
     public Song(String title, String artist, String rating, String bpm) {
         this.title = title;
@@ -52,19 +53,19 @@ public class Song implements Comparable<Song>{
     public int compareTo(Song song) {
         return title.compareTo(song.getTitle());
     }
-<<<<<<< HEAD
 
     @Override
     public boolean equals(Object aSong) {
+
         Song s = (Song) aSong;
         return getTitle().equals(s.getTitle());
     }
 
     @Override
     public int hashCode() {
+        LOGGER.info(Integer.toString(title.hashCode()));
         return title.hashCode();
+        
     }
-=======
->>>>>>> afb0099879c0fe93468867764cc9c00f416120bb
     
 }

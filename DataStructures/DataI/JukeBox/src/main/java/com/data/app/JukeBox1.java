@@ -8,11 +8,8 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.util.Collections;
 import java.util.Comparator;
-<<<<<<< HEAD
 import java.util.HashSet;
-=======
-
->>>>>>> afb0099879c0fe93468867764cc9c00f416120bb
+import java.util.TreeSet;
 public class JukeBox1 {
 
     private ArrayList<Song> songList = new ArrayList<Song>();
@@ -50,12 +47,16 @@ public class JukeBox1 {
     public void go() {
         getSongs();
         System.out.println(songList);
-        Collections.sort(songList);
+ 
 
 
         HashSet<Song> songSet = new HashSet<Song>();
         songSet.addAll(songList);
 
-        System.out.println(songList);
+        System.out.println(songSet);
+
+
+        TreeSet<Song> songTreeSet = new TreeSet<Song>();
+        songSet.addAll(songList);
     }
 }

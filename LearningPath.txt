@@ -1,0 +1,71 @@
+Learning Path: 
+
+------ Java Characteristics -----
+ 
+Introduccion to Java:
+	With: HeadFirst Java 2nd Edition(Java SE 1.5)
+
+JDBC: Java Database Conectivity API
+       With: Makigas - Curso de JDBC
+JNDI
+
+JNLP:Java Network Launch Program API. 
+
+JAAS: 
+
+JSF:
+ 
+CORBA:
+
+SERVLETS AND JSP
+	With: HeadFirst Java Servlets And JSP 2nd
+
+Java Networking API:
+
+Java Concurrency API:
+	
+Java Collections API:
+
+Java Lambdas:
+
+---- Theorical Engeeneer thinking resources: -----
+
+Object Oriented Analisys And Design:
+	With: HeadFirst OOAD. 
+Design Patterns: 
+	With: HeadFirst DP
+
+Aspect Oriented Programming:
+	
+Clean Code: 
+	With: Clean Code Uncle Bob
+Database Design: 
+	With: Fundamentos de las Bases de datos 4ta Edicion
+
+----------Advanced Java Web Frameworks:------------
+
+Spring Framework
+
+Apache Wicket
+
+
+--------- Build Systems / Dependency Administration --------
+Apache Maven
+
+Gradle
+---------- Unit Testing FW ----------
+Junit
+
+--------- Deployment Utilities ---------
+Docker
+
+Kubernetes
+--------- Database Engines ---------
+
+MySQL
+Oracle
+
+-------- Front End Path ------- 
+
+Pure Front End Javascript 
+JQuery 

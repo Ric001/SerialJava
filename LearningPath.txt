@@ -69,3 +69,5 @@ Oracle
 
 Pure Front End Javascript 
 JQuery 
+Css / Bootstrap 3
+HTML / HTML 5

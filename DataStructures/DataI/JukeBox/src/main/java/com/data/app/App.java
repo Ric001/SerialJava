@@ -86,7 +86,7 @@ class Dog extends Animal {
 }
 
 class Cat extends Animal {
-    Cat(String name) {
+    Cat(String name) { 
         super(name);
     }
     void mow() { System.out.println(name.concat(" it's maouwing"));}

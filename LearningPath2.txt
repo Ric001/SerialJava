@@ -20,13 +20,14 @@ JNI:
 
 JNLP:Java Network Launch Program API. 
 
-SERVLETS AND JSP	With: HeadFirst Java Servlets And JSP 2nd
+SERVLETS AND JSP With: HeadFirst Java Servlets And JSP 2nd
 
 JSF:
 
 Java Networking API:
 
 RMI: With: Head First Java 2nd Edition
+
 EJB: With: Head First EJB
 
 CORBA:

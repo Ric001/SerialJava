@@ -1,3 +1,5 @@
+package com.headfirstjava;
+
 public class MyApp {
     public static void main(String[] args) {
         System.out.println("En la piel de una gota");

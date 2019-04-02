@@ -9,23 +9,26 @@ Introduccion to Java:
 JDBC: Java Database Conectivity API
        With: Makigas - Curso de JDBC
 JNDI:
+       With:https://www.oracle.com/technetwork/java/index-140319.html
 
 Java Collections API:
+       OCA
 
 Java Lambdas:
-
+       OCA
 Java Concurrency API:
-
+       OCA
 JNI:
 
 JNLP:Java Network Launch Program API. 
 
-SERVLETS AND JSP With: HeadFirst Java Servlets And JSP 2nd
-
+SERVLETS AND JSP:
+       With: HeadFirst Java Servlets And JSP 2nd
+       
 JSF:
 
 Java Networking API:
-
+       
 RMI: With: Head First Java 2nd Edition
 
 EJB: With: Head First EJB
@@ -35,6 +38,7 @@ CORBA:
 JAAS: 
 
 ---- Theorical Engineer thinking resources: -----
+
 Object Oriented Analisys And Design: With: HeadFirst OOAD. 
 Design Patterns: With: HeadFirst DP
 Aspect Oriented Programming:

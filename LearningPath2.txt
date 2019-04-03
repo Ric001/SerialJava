@@ -8,16 +8,22 @@ Introduccion to Java:
 
 JDBC: Java Database Conectivity API
        With: Makigas - Curso de JDBC
+       With: OCP - 8
+IO / NIO:
+       With: OCP - 8
 JNDI:
        With:https://www.oracle.com/technetwork/java/index-140319.html
 
 Java Collections API:
-       OCA
+       With: OCA - 8 
+       With: OCP - 8
 
 Java Lambdas:
-       OCA
+      With: OCA - 8 
+      With: OCP - 8
 Java Concurrency API:
-       OCA
+       With: OCA - 8 
+       With: OCP - 8
 JNI:
 
 JNLP:Java Network Launch Program API. 
@@ -29,10 +35,12 @@ JSF:
 
 Java Networking API:
        
-RMI: With: Head First Java 2nd Edition
-
-EJB: With: Head First EJB
-
+RMI: 
+       With: Head First Java 2nd Edition
+       With: Distributed Computing on Java 9
+EJB: 
+       With: Head First EJB
+       With Beginning EJB in Java EE
 CORBA:
 
 JAAS: 

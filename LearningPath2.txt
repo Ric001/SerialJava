@@ -43,6 +43,7 @@ EJB:
        With Beginning EJB in Java EE
 CORBA:
 
+
 JAAS: 
 
 ---- Theorical Engineer thinking resources: -----
@@ -74,3 +75,7 @@ Pure Front End Javascript
 JQuery 
 Css / Bootstrap 3
 
+----- Operative System ------ 
+Linux - Ubuntu
+Linux - Debian
+Linux - Red Hat

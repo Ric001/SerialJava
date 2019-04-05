@@ -5,7 +5,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.WebServlet;
 
-@WebServlet(value = "/example")
+@WebServlet(value = "/index")
 public class MyServletA extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) 
@@ -16,7 +16,7 @@ public class MyServletA extends HttpServlet {
                 String message = "If you're reading this, it worked!";
                 
                 out.println("<html><body>");
-                out.println("<h1>".concat(message).concat("</h1>"));
+                out.println("<h1><a href='phrase'>Get Phrase</a></h1>");
                 out.println("</body></html>");
                 out.flush();
             } 
@@ -30,8 +30,6 @@ public class MyServletA extends HttpServlet {
             response.setContentType("text/html");
             
             try (PrintWriter out = response.getWriter()){
-                
-
                 out.println("<html><body>ERROR</body></html>");
                 out.flush();
             }
